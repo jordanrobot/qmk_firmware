@@ -21,9 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xCDCD
 #define PRODUCT_ID      0x5337
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    shens
+#define MANUFACTURER    shensmobile
 #define PRODUCT         Boardwalk
-#define DESCRIPTION     QMK keyboard firmware for Boardwalk
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -43,14 +42,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COL_PINS { F7, C7, C6, B6, B5, B4, D7, D6, D4, D5, D3, D2, D1, D0 }
 #define UNUSED_PINS
 
-/* COL2ROW, ROW2COL, or CUSTOM_MATRIX */
+/* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
 // #define BACKLIGHT_PIN F5
 // #define BACKLIGHT_LEVELS 6
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCING_DELAY 5
+#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -72,8 +71,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
 
 // ws2812 options
 #define RGB_DI_PIN B7 // pin the DI on the ws2812 is hooked-up to

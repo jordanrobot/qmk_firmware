@@ -18,15 +18,7 @@
 
 TestDriver* TestDriver::m_this = nullptr;
 
-TestDriver::TestDriver()
-    : m_driver{
-        &TestDriver::keyboard_leds,
-        &TestDriver::send_keyboard,
-        &TestDriver::send_mouse,
-        &TestDriver::send_system,
-        &TestDriver::send_consumer
-    }
-{
+TestDriver::TestDriver() : m_driver{&TestDriver::keyboard_leds, &TestDriver::send_keyboard, &TestDriver::send_mouse, &TestDriver::send_system, &TestDriver::send_consumer} {
     host_set_driver(&m_driver);
     m_this = this;
 }
@@ -40,8 +32,8 @@ uint8_t TestDriver::keyboard_leds(void) {
 }
 
 void TestDriver::send_keyboard(report_keyboard_t* report) {
+    test_logger.trace() << *report;
     m_this->send_keyboard_mock(*report);
-
 }
 
 void TestDriver::send_mouse(report_mouse_t* report) {
